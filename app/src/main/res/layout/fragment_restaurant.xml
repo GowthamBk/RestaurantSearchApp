@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <data>
+
+    </data>
+
+    <androidx.appcompat.widget.LinearLayoutCompat
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/colorWhite"
+        android:orientation="vertical">
+
+        <include
+            android:id="@+id/include"
+            layout="@layout/toolbar_main" />
+
+        <androidx.appcompat.widget.SearchView
+            android:id="@+id/searchRestaurant"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/dp_50"
+            android:layout_margin="@dimen/dp_5"
+            android:background="@drawable/bg_rounded"
+            android:iconifiedByDefault="false"
+            android:theme="@style/SearchView" />
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/rv_restaurant_list"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_margin="@dimen/dp_10" />
+
+        <androidx.appcompat.widget.AppCompatImageView
+            android:id="@+id/img_no_restaurant_found"
+            android:layout_width="@dimen/dp_150"
+            android:layout_height="@dimen/dp_150"
+            android:layout_gravity="center"
+            android:src="@drawable/ic_sad"
+            android:visibility="gone" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/tv_no_restaurant_found"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:text="@string/no_restaurant_found"
+            android:textSize="@dimen/sp_18"
+            android:visibility="gone" />
+
+    </androidx.appcompat.widget.LinearLayoutCompat>
+</layout>

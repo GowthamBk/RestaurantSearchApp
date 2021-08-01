@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/restaurant_graph"
+    app:startDestination="@id/restaurantFragment">
+
+    <fragment
+        android:id="@+id/restaurantFragment"
+        android:name="com.svarks.myapplication.ui.fragments.RestaurantFragment"
+        android:label="fragment_restaurant"
+        tools:layout="@layout/fragment_restaurant" >
+        <action
+            android:id="@+id/action_restaurantFragment_to_restaurantDetailsFragment"
+            app:destination="@id/restaurantDetailsFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/restaurantDetailsFragment"
+        android:name="com.svarks.myapplication.ui.fragments.RestaurantDetailsFragment"
+        android:label="fragment_restaurant_details"
+        tools:layout="@layout/fragment_restaurant_details" />
+</navigation>
